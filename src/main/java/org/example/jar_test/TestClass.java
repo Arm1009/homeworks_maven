@@ -6,5 +6,6 @@ public class TestClass {
     public static void main(String[] args) {
         ArraysToTest ts = new ArraysToTest();
         ts.desArr();
+        System.out.println();
     }
 }
