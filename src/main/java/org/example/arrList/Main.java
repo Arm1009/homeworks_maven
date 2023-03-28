@@ -18,6 +18,7 @@ public class Main {
 //        arr.lastLink("Gexam");
 //        arr.removeLFList();
 //        arr.cloneList();
-        arr.isEmptyList();
+//        arr.isEmptyList();
+//        arr.sumArrays();
     }
 }

@@ -15,17 +15,17 @@ public class ArrayUtilTest {
     @Test
     public void zerOut(){
         int arr[] = {1,0,2,4,6,7,8,7};
-        int call = 0;
+        int [] array = {1,2,4,6,7,8,7};
 
-        assertFalse(call == arr.length);
+        assertArrayEquals(array ,ar.zerOut(arr));
 
-        assertTrue(call == arr.length);
+
     }
     @Test
     public void divideArr(){
       int arr[] = {4,6,8,12,1,5,71};
       int vis = 0;
-      assertFalse(vis == arr.length);
+      assertFalse(vis == ar.divideArr(arr));
     }
     @Test
     public void noF3(){

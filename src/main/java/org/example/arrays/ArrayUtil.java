@@ -6,6 +6,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class ArrayUtil {
     Scanner sc = new Scanner(System.in);
+
     //  1. Գրել method, որը տպում է int[] n  array-ի դրական տարրերը.
     public static void randArr() {
 
@@ -28,7 +29,7 @@ public class ArrayUtil {
 
     //3. Գրել method, որը գտնում եւ  տպում է  long[] l array-ի ամենամեծ տարրը.
 //4. Գրել method, որը գտնում եւ տպում է  float[] f  array-ի ամենափոքր տարրը
-    public  void maxMinArr() {
+    public void maxMinArr() {
 //        long minValue = -1000;
 //        long maxValue = 1000;
 
@@ -88,7 +89,7 @@ public class ArrayUtil {
 
     //6. Գրել method, որը ստեղծում է երկու նույն չափը ունեցող array-ներ գումարում է array
 //-ի համապատասխան էլեմենտները եւ գրում երրորդ array-ի մեջ։
-    public  void arraysSum3() {
+    public void arraysSum3() {
         int[] a = {1, 2, 3, 4, 5};
         int[] b = {5, 4, 3, 2, 1};
         int[] c = new int[a.length];
@@ -112,7 +113,7 @@ public class ArrayUtil {
     //7. Գրել method, որը հաշվում է թե քանի անգամ է  k թիվը հանդիպել array-ի
     //Էլեմենտների մեջ։
 
-    public  void findNum() {
+    public void findNum() {
 
         System.out.println("input a number 0-10: ");
         int n = sc.nextInt();
@@ -130,7 +131,7 @@ public class ArrayUtil {
     }
 
     //9  Դասավորել տրված թվերի հաջորդականության անդամները նվազման կարգով:
-    public  int[] noF3(int a[]) {
+    public int[] noF3(int a[]) {
 
 //        for (int i = 0; i < a.length; i++) {
 //            a[i] = (int) (Math.random() * 10);
@@ -154,9 +155,10 @@ public class ArrayUtil {
         return a;
 
     }
+
     //10  Դասավորել տրված ամբողջ թվերի հաջորդականության անդամներն անյպես, որ .
     //   վերջում լինեն կենտերը:
-    public  int  divideArr(int[]array) {
+    public int divideArr(int[] array) {
 
 
 //        int[] array = {1, 5, 6, 4, 9, 18, 7, 1, 2, 4,};
@@ -171,25 +173,35 @@ public class ArrayUtil {
                 }
             }
         }
-        for ( int value : array) {
+        for (int value : array) {
 
-        }return temp;
+        }
+        return temp;
     }
+
     //11  Տրված իրական թվերի հաջորդականությունից հեռացնել բոլոր զրոները։
-    public int zerOut(int arr[]) {
+    public int[] zerOut(int arr[]) {
 //        int arr[] = {1,0,6,7,9,7,0,3,6,0};
         int call = 0;
-        int i;
-        for (i = 0; i < arr.length; i++) {
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
             if (call != arr[i]) {
-
+                count++;
             }
+
         }
-        return arr[i];
+        int[] array1 = new int[count];
+        for (int j = 0, i = 0; j < arr.length; j++) {
+            if (call != arr[j]) {
+                array1[i] = arr[j];
+                i++;
+            }
+        }return array1;
     }
+
     //13  Ներածել n բնական թիվը 2-ական տեսքով՝ ստանալով 0-ներից ու 1-երից կազմված .
     // զանգված եւ արտածել n  թվի 10-ական ներկայացումը:
-    public  int  zeroOne(int n){
+    public int zeroOne(int n) {
         int counter = 1;
         int number = n;
         int power = 0;
@@ -211,9 +223,6 @@ public class ArrayUtil {
             power++;
         }
         return dec;
-
-
-
 
 
     }

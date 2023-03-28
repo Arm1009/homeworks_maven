@@ -13,7 +13,8 @@ class arrayList {
         list.add("Blue");
         for (String elements : list) {
             System.out.println(elements);
-        }return s;
+        }
+        return s;
     }
 
 
@@ -26,14 +27,16 @@ class arrayList {
         list1.add("Purple");
         list1.add("Blue");
 
-        list1.add(0,"Pink");
-        list1.add(1,"Gray");
+        list1.add(0, "Pink");
+        list1.add(1, "Gray");
         for (String elements : list1) {
             System.out.println(elements);
-        }return s;
+        }
+        return s;
     }
-    public String updateArr(int index, String color){
-        List<String> listAr = new ArrayList<String >();
+
+    public String updateArr(int index, String color) {
+        List<String> listAr = new ArrayList<String>();
         String s = null;
         listAr.add("Green");
         listAr.add("Red");
@@ -41,14 +44,16 @@ class arrayList {
         listAr.add("Purple");
         listAr.add("Blue");
 
-        listAr.set(index,color);
-        listAr.set(index,color);
-        for (String elem:listAr) {
+        listAr.set(index, color);
+        listAr.set(index, color);
+        for (String elem : listAr) {
             System.out.println(elem);
-        }return s;
+        }
+        return s;
     }
-    public String searchArrList(String el){
-        List<String> listAr = new ArrayList<String >();
+
+    public String searchArrList(String el) {
+        List<String> listAr = new ArrayList<String>();
         String s = null;
         listAr.add("Green");
         listAr.add("Red");
@@ -56,15 +61,16 @@ class arrayList {
         listAr.add("Purple");
         listAr.add("Blue");
 
-        if(listAr.contains(el)){
+        if (listAr.contains(el)) {
             System.out.println("This color is element of List");
-        }else {
+        } else {
             System.out.println("This color is not in this List");
         }
         return s;
     }
-    public String copyList(){
-        List<String> list1 = new ArrayList<String >();
+
+    public String copyList() {
+        List<String> list1 = new ArrayList<String>();
         String s = null;
         list1.add("Green");
         list1.add("Red");
@@ -79,28 +85,29 @@ class arrayList {
         list2.add("3");
         list2.add("4");
 
-        Collections.copy(list2,list1);
-        System.out.println("copied list:"+list1);
-        System.out.println("original list"+list2);
+        Collections.copy(list2, list1);
+        System.out.println("copied list:" + list1);
+        System.out.println("original list" + list2);
         return s;
     }
-    public String reverseList(){
-        List<String> listed = new ArrayList<String >();
+
+    public String reverseList() {
+        List<String> listed = new ArrayList<String>();
         String s = null;
         listed.add("Green");
         listed.add("Red");
         listed.add("Silver");
         listed.add("Purple");
         listed.add("Blue");
-        System.out.println("first list:"+listed);
+        System.out.println("first list:" + listed);
 
         Collections.reverse(listed);
-        System.out.println("reversed list:"+listed);
+        System.out.println("reversed list:" + listed);
         return s;
     }
 
-    public String swapList(int i, int j){
-        List<String> listsw = new ArrayList<String >();
+    public String swapList(int i, int j) {
+        List<String> listsw = new ArrayList<String>();
         String s = null;
         listsw.add("Green");
         listsw.add("Red");
@@ -108,39 +115,40 @@ class arrayList {
         listsw.add("Purple");
         listsw.add("Blue");
 
-        for (String a:listsw) {
-            System.out.println("Before swap:"+a+"\n");
+        for (String a : listsw) {
+            System.out.println("Before swap:" + a + "\n");
         }
-       try {
-           Collections.swap(listsw, i, j);
-       }
-       catch (IndexOutOfBoundsException e){
-           System.err.println(e.getMessage());
-       }
-        for (String b:listsw) {
-            System.out.println("After swap:"+b);
+        try {
+            Collections.swap(listsw, i, j);
+        } catch (IndexOutOfBoundsException e) {
+            System.err.println(e.getMessage());
+        }
+        for (String b : listsw) {
+            System.out.println("After swap:" + b);
 
         }
-return s;
+        return s;
     }
-    public Boolean orEmpOrNot(){
-        List<String> listEm = new ArrayList<String >();
+
+    public Boolean orEmpOrNot() {
+        List<String> listEm = new ArrayList<String>();
         Boolean s = false;
         listEm.add("Green");
         listEm.add("Red");
         listEm.add("Silver");
         listEm.add("Purple");
         listEm.add("Blue");
-        System.out.println("Original arrayList:"+listEm);
-        System.out.println("Now we are checked this arrayList is empty or not:"+listEm.isEmpty());
+        System.out.println("Original arrayList:" + listEm);
+        System.out.println("Now we are checked this arrayList is empty or not:" + listEm.isEmpty());
 
         listEm.removeAll(listEm);
-        System.out.println("List after remove all elements:"+listEm);
-        System.out.println("And now it`s time for a checked is empty or not:"+listEm.isEmpty());
+        System.out.println("List after remove all elements:" + listEm);
+        System.out.println("And now it`s time for a checked is empty or not:" + listEm.isEmpty());
 
         return s;
     }
-    public void ensCapList(){
+
+    public void ensCapList() {
         List<String> a1 = new ArrayList<String>(3);
         String s = null;
 
@@ -148,15 +156,16 @@ return s;
         a1.add("Red");
         a1.add("Silver");
 
-        System.out.println("Original list:"+a1);
-        ((ArrayList)a1).ensureCapacity(6);
+        System.out.println("Original list:" + a1);
+        ((ArrayList) a1).ensureCapacity(6);
         a1.add("Black");
         a1.add("Yellow");
         a1.add("White");
-        System.out.println("Extended list:"+a1);
+        System.out.println("Extended list:" + a1);
 
     }
-    public void linkPos(){
+
+    public void linkPos() {
         LinkedList<String> linkedList = new LinkedList<String>();
         linkedList.add("White");
         linkedList.add("Black");
@@ -165,11 +174,12 @@ return s;
         linkedList.add("Rose");
 
         Iterator it = linkedList.iterator();
-        while(it.hasNext()){
+        while (it.hasNext()) {
             System.out.println(it.next());
         }
     }
-    public void revLink(){
+
+    public void revLink() {
         LinkedList<String> linkedList = new LinkedList<String>();
         linkedList.add("White");
         linkedList.add("Black");
@@ -178,13 +188,14 @@ return s;
         linkedList.add("Rose");
 
         Iterator it = linkedList.descendingIterator();
-        while (it.hasNext()){
+        while (it.hasNext()) {
             System.out.println(it.next());
 
         }
 
     }
-    public void firsLastLink(){
+
+    public void firsLastLink() {
         LinkedList<String> link = new LinkedList<String>();
 
         link.add("White");
@@ -198,7 +209,7 @@ return s;
         System.out.println(link);
     }
 
-    public void lastLink(String a){
+    public void lastLink(String a) {
         LinkedList<String> link = new LinkedList<String>();
 
         link.add("White");
@@ -210,7 +221,8 @@ return s;
         link.addLast(a);
         System.out.println(link);
     }
-    public void removeLFList(){
+
+    public void removeLFList() {
         LinkedList<String> link = new LinkedList<String>();
 
         link.add("White");
@@ -219,41 +231,59 @@ return s;
         link.add("Blue");
         link.add("Rose");
 
-        System.out.println("This is linked list"+ link);
+        System.out.println("This is linked list" + link);
         link.removeFirst();
         link.removeLast();
-        System.out.println("We removed last and first element in this list:"+link);
-        }
+        System.out.println("We removed last and first element in this list:" + link);
+    }
 
-        public void cloneList(){
-            LinkedList<String> link = new LinkedList<String>();
+    public void cloneList() {
+        LinkedList<String> link = new LinkedList<String>();
 
-            link.add("White");
-            link.add("Black");
-            link.add("Red");
-            link.add("Blue");
-            link.add("Rose");
-            System.out.println("Origin linkedList"+link);
-            LinkedList<String> clonedLink = new LinkedList<String>();
-            clonedLink =(LinkedList) link.clone();
-            System.out.println("Cloned linkedList"+clonedLink);
-        }
-        public void isEmptyList(){
-            LinkedList<String> link = new LinkedList<String>();
+        link.add("White");
+        link.add("Black");
+        link.add("Red");
+        link.add("Blue");
+        link.add("Rose");
+        System.out.println("Origin linkedList" + link);
+        LinkedList<String> clonedLink = new LinkedList<String>();
+        clonedLink = (LinkedList) link.clone();
+        System.out.println("Cloned linkedList" + clonedLink);
+    }
 
-            link.add("White");
-            link.add("Black");
-            link.add("Red");
-            link.add("Blue");
-            link.add("Rose");
-            System.out.println(link.isEmpty());
-            link.removeAll(link);
-            System.out.println(link.isEmpty());
+    public void isEmptyList() {
+        LinkedList<String> link = new LinkedList<String>();
 
-        }
-
+        link.add("White");
+        link.add("Black");
+        link.add("Red");
+        link.add("Blue");
+        link.add("Rose");
+        System.out.println(link.isEmpty());
+        link.removeAll(link);
+        System.out.println(link.isEmpty());
 
     }
+
+    public void sumArrays() {
+        List<Integer> sumAverage = Arrays.asList(12,45);
+        int aver = 0;
+        for (int i : sumAverage) {
+            aver = aver + i;
+        }
+        int sum = sumAverage.stream().mapToInt(Integer::intValue).sum();
+        System.out.println("Sum of the list is:"+sum);
+        if (sumAverage.isEmpty()) {
+            System.out.println("List is empty");
+        } else {
+            System.out.println("The average of list:" + aver / (float) sumAverage.size());
+
+
+        }
+
+    }
+}
+
 
 
 
