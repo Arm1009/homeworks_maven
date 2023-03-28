@@ -126,17 +126,17 @@ public class ArrayUtil {
 
 
         }
-        System.out.print(count);
+
     }
 
     //9  Դասավորել տրված թվերի հաջորդականության անդամները նվազման կարգով:
-    public  void noF3() {
-        int a[] = new int[4];
-        for (int i = 0; i < a.length; i++) {
-            a[i] = (int) (Math.random() * 10);
+    public  int[] noF3(int a[]) {
 
-            System.out.println("uncorrect" + Arrays.toString(a));
-        }
+//        for (int i = 0; i < a.length; i++) {
+//            a[i] = (int) (Math.random() * 10);
+//
+//            System.out.println("uncorrect" + Arrays.toString(a));
+//        }
 
         int tmt;
         for (int i = 0; i < a.length; i++) {
@@ -151,16 +151,17 @@ public class ArrayUtil {
             }
 
         }
-        System.out.println("correct" + Arrays.toString(a));
+        return a;
 
     }
     //10  Դասավորել տրված ամբողջ թվերի հաջորդականության անդամներն անյպես, որ .
     //   վերջում լինեն կենտերը:
-    public  void divideArr() {
+    public  int  divideArr(int[]array) {
 
 
-        int[] array = {1, 5, 6, 4, 9, 18, 7, 1, 2, 4,};
-        int temp;
+//        int[] array = {1, 5, 6, 4, 9, 18, 7, 1, 2, 4,};
+        int temp = 0;
+
         for (int i = 0; i < array.length; i++) {
             for (int j = i; j < array.length; j++) {
                 if (array[i] % 2 != 0) {
@@ -170,25 +171,27 @@ public class ArrayUtil {
                 }
             }
         }
-        for (int value : array) {
-            System.out.print(value + " ");
-        }
+        for ( int value : array) {
+
+        }return temp;
     }
     //11  Տրված իրական թվերի հաջորդականությունից հեռացնել բոլոր զրոները։
-    public  void zeroOut(){
-        int arr[] = {1,0,6,7,9,7,0,3,6,0};
+    public int zerOut(int arr[]) {
+//        int arr[] = {1,0,6,7,9,7,0,3,6,0};
         int call = 0;
-        for (int i = 0; i<arr.length;i++){
-            if(call!=arr[i]){
-                System.out.print(arr[i]+"  ");
+        int i;
+        for (i = 0; i < arr.length; i++) {
+            if (call != arr[i]) {
+
             }
         }
+        return arr[i];
     }
     //13  Ներածել n բնական թիվը 2-ական տեսքով՝ ստանալով 0-ներից ու 1-երից կազմված .
     // զանգված եւ արտածել n  թվի 10-ական ներկայացումը:
-    public  int  zeroOne(){
+    public  int  zeroOne(int n){
         int counter = 1;
-        int number = 0;
+        int number = n;
         int power = 0;
         int temp = 0;
         int dec = 0;
@@ -198,8 +201,8 @@ public class ArrayUtil {
         }
         int[] array = new int[counter];
         for (int i = 0; i < counter; i++) {
-            array[i] = number % 10;
-            number /= 10;
+            array[i] = n % 10;
+            n /= 10;
             System.out.println(array[i]);
         }
         for (int j = 0; j < array.length; j++) {
